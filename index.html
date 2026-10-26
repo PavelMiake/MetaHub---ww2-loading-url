@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metahub Loading Screen (WW2)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="background-slider"></div>
+    <div class="overlay"></div>
+
+    <div class="layout">
+        
+        <header class="top-bar">
+            <div class="logo-container">
+                <img src="mh_ico.png" alt="Metahub Logo" id="server-icon">
+                <div class="title-box">
+                    <h1 id="server-name"><span class="text-white">Meta</span><span class="text-orange">Hub</span></h1>
+                    <h2 class="subtitle">Тотальная Война</h2>
+                </div>
+            </div>
+
+            <div class="server-stats">
+                <div class="stat-box">
+                    <div class="stat-info">
+                        <span class="stat-label">КАРТА</span>
+                        <span class="stat-value" id="map-name">Загрузка...</span>
+                    </div>
+                    <img src="map.png" alt="Map Icon" class="stat-icon">
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-info">
+                        <span class="stat-label">ИГРОКИ</span>
+                        <span class="stat-value" id="max-players">...</span>
+                    </div>
+                    <img src="user.png" alt="User Icon" class="stat-icon">
+                </div>
+            </div>
+        </header>
+
+        <main class="center-content">
+            <div class="loading-wrapper">
+                <div class="status-top">
+                    <span id="status-text">Инициализация протоколов...</span>
+                    <span id="percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bottom-bar">
+            <div class="quote-container">
+                <div class="quote-content">
+                    <span class="quote-author" id="quote-author">АВТОР</span>
+                    <p class="quote-text" id="quote-text">«Текст цитаты загружается...»</p>
+                </div>
+                <div class="quote-decor">
+                    <span class="dash">---</span>
+                    <div class="decor-line"></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    <audio id="bg-gunshots" src="gunshots.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
